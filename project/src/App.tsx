@@ -4,7 +4,7 @@ import LandingPage from "@/components/landing/LandingPage";
 function App() {
   return (
     <ThemeProvider defaultTheme="dark" storageKey="landing-theme">
-      <LandingPage />
+      <LandingPage/>
     </ThemeProvider>
   );
 }
