@@ -5,8 +5,8 @@ import {
   SheetContent,
   SheetTrigger,
 } from "@/components/ui/sheet";
-import { Menu } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { Menu } from "lucide-react";
 // import { useTheme } from "@/components/theme/theme-provider";
 // import { MoonIcon, SunIcon } from "@radix-ui/react-icons";
 
@@ -81,10 +81,9 @@ export default function Navbar() {
           {/* Mobile Menu */}
           <Sheet>
             <SheetTrigger asChild className="md:hidden">
-              <Button variant="ghost" size="icon">
                 <Menu className="h-6 w-6" />
-                <span className="sr-only">Toggle menu</span>
-              </Button>
+
+
             </SheetTrigger>
             <SheetContent side="right" className="w-[300px] sm:w-[400px]">
               <nav className="flex flex-col gap-6 mt-12">

@@ -38,7 +38,7 @@ const stats = [
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden pt-32 pb-24 md:pt-40 md:pb-32">
+    <section className="relative overflow-hidden pt-32 px-5 pb-24 md:pt-40 md:pb-32">
       {/* Background gradient */}
       <div className="absolute inset-0 z-0">
         <div className="absolute top-0 left-0 right-0 h-[500px] bg-gradient-to-b from-purple-900/20 to-transparent opacity-70"></div>
