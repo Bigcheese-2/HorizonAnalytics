@@ -1,5 +1,4 @@
 import { useEffect, useRef, useState } from "react";
-import { cn } from "@/lib/utils";
 
 type MotionProps = {
   children: React.ReactNode;
@@ -107,16 +106,21 @@ function camelToKebab(string: string) {
 }
 
 // Create motion components for common HTML elements
-motion.div = motion("div");
-motion.span = motion("span");
-motion.h1 = motion("h1");
-motion.h2 = motion("h2");
-motion.h3 = motion("h3");
-motion.p = motion("p");
-motion.button = motion("button");
-motion.a = motion("a");
-motion.ul = motion("ul");
-motion.li = motion("li");
-motion.section = motion("section");
-motion.article = motion("article");
-motion.img = motion("img");
+const createMotionComponent = (tag: keyof JSX.IntrinsicElements) => {
+  const Component = tag as any;
+  return motion(Component);
+};
+
+motion.div = createMotionComponent("div");
+motion.span = createMotionComponent("span");
+motion.h1 = createMotionComponent("h1");
+motion.h2 = createMotionComponent("h2");
+motion.h3 = createMotionComponent("h3");
+motion.p = createMotionComponent("p");
+motion.button = createMotionComponent("button");
+motion.a = createMotionComponent("a");
+motion.ul = createMotionComponent("ul");
+motion.li = createMotionComponent("li");
+motion.section = createMotionComponent("section");
+motion.article = createMotionComponent("article");
+motion.img = createMotionComponent("img");

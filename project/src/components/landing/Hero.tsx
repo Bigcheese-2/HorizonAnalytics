@@ -3,7 +3,7 @@ import { motion } from "@/components/ui/motion";
 import { Sparkles, Users, TrendingUp, Activity, ArrowUpRight } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { ChartContainer } from "@/components/ui/chart";
-import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from "recharts";
+import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip } from "recharts";
 
 const data = [
   { name: "Jan", value: 400 },
