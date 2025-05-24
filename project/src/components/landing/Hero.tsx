@@ -38,16 +38,16 @@ const stats = [
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden pt-32 px-5 pb-24 md:pt-40 md:pb-32">
+    <section className="relative w-full px-5 pt-32 pb-24 md:pt-40 md:pb-32 overflow-hidden">
       {/* Background gradient */}
-      <div className="absolute inset-0 z-0">
+      <div className="absolute inset-0 z-0 w-full overflow-hidden">
         <div className="absolute top-0 left-0 right-0 h-[500px] bg-gradient-to-b from-purple-900/20 to-transparent opacity-70"></div>
         <div className="absolute bottom-0 left-0 right-0 h-[500px] bg-gradient-to-t from-background to-transparent"></div>
         <div className="absolute -left-24 -top-24 h-[300px] w-[300px] rounded-full bg-purple-600/20 blur-[100px]"></div>
         <div className="absolute -right-24 top-1/3 h-[250px] w-[250px] rounded-full bg-pink-600/20 blur-[100px]"></div>
       </div>
 
-      <div className="container relative z-10">
+      <div className="container mx-auto relative z-10">
         <div className="flex flex-col items-center text-center space-y-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -178,8 +178,10 @@ export default function Hero() {
             </div>
             
             {/* Decorative elements */}
+            <div className="overflow-hidden">
             <div className="absolute -top-6 -left-6 w-24 h-24 bg-purple-600/30 rounded-full blur-3xl"></div>
             <div className="absolute -bottom-8 -right-8 w-28 h-28 bg-pink-600/20 rounded-full blur-3xl"></div>
+            </div>
           </motion.div>
         </div>
       </div>

@@ -1,7 +1,13 @@
 import { motion } from "@/components/ui/motion";
-import { 
-  Zap, Shield, Globe, LineChart, 
-  Clock, Smartphone, Code, RefreshCw 
+import {
+  Zap,
+  Shield,
+  Globe,
+  LineChart,
+  Clock,
+  Smartphone,
+  Code,
+  RefreshCw,
 } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 
@@ -39,54 +45,67 @@ export default function Features() {
     {
       icon: <Zap size={24} />,
       title: "Lightning Fast",
-      description: "Optimized performance ensures lightning-fast load times and smooth interactions for your users."
+      description:
+        "Optimized performance ensures lightning-fast load times and smooth interactions for your users.",
     },
     {
       icon: <Shield size={24} />,
       title: "Secure by Design",
-      description: "Enterprise-grade security protects your data with end-to-end encryption and regular security audits."
+      description:
+        "Enterprise-grade security protects your data with end-to-end encryption and regular security audits.",
     },
     {
       icon: <Globe size={24} />,
       title: "Global Reach",
-      description: "Deploy to our global edge network for low-latency access from anywhere in the world."
+      description:
+        "Deploy to our global edge network for low-latency access from anywhere in the world.",
     },
     {
       icon: <LineChart size={24} />,
       title: "Advanced Analytics",
-      description: "Gain valuable insights with comprehensive analytics and customizable reporting tools."
+      description:
+        "Gain valuable insights with comprehensive analytics and customizable reporting tools.",
     },
     {
       icon: <Clock size={24} />,
       title: "Real-time Updates",
-      description: "Stay in sync with real-time data updates and collaborative features for your team."
+      description:
+        "Stay in sync with real-time data updates and collaborative features for your team.",
     },
     {
       icon: <Smartphone size={24} />,
       title: "Mobile Optimized",
-      description: "Fully responsive design ensures a perfect experience on any device or screen size."
+      description:
+        "Fully responsive design ensures a perfect experience on any device or screen size.",
     },
     {
       icon: <Code size={24} />,
       title: "Developer Friendly",
-      description: "Extensive API documentation and developer tools make integration a breeze."
+      description:
+        "Extensive API documentation and developer tools make integration a breeze.",
     },
     {
       icon: <RefreshCw size={24} />,
       title: "Continuous Updates",
-      description: "Regular updates with new features and improvements based on user feedback."
-    }
+      description:
+        "Regular updates with new features and improvements based on user feedback.",
+    },
   ];
 
   return (
-    <section id="features" className="py-24 relative overflow-hidden">
+    <section
+      id="features"
+      className="py-24 relative overflow-hidden w-full 2xl:max-w-[1440px] 2xl:mx-auto"
+    >
       {/* Background decorations */}
-      <div className="absolute -right-40 top-20 w-80 h-80 bg-purple-600/10 rounded-full blur-3xl"></div>
-      <div className="absolute -left-40 bottom-20 w-80 h-80 bg-pink-600/10 rounded-full blur-3xl"></div>
+      <div className="overflow-hidden w-full">
+        <div className="absolute -right-40 top-20 w-80 h-80 bg-purple-600/10 rounded-full blur-3xl"></div>
+        <div className="absolute -left-40 bottom-20 w-80 h-80 bg-pink-600/10 rounded-full blur-3xl"></div>
+      </div>
 
-      <div className="container px-4 md:px-6">
+      <div className="container px-4 md:px-6 mx-auto ">
         <div className="text-center space-y-4 mb-16">
-          <motion.h2 
+          <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
@@ -95,14 +114,15 @@ export default function Features() {
           >
             Powerful Features
           </motion.h2>
-          <motion.p 
+          <motion.p
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
             viewport={{ once: true }}
             className="mx-auto max-w-2xl text-muted-foreground text-lg"
           >
-            Everything you need to build exceptional digital experiences, all in one platform.
+            Everything you need to build exceptional digital experiences, all in
+            one platform.
           </motion.p>
         </div>
 

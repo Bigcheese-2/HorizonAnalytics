@@ -1,7 +1,12 @@
 import { useState } from "react";
 import { motion } from "@/components/ui/motion";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card";
+import {
+  Card,
+  CardContent,
+  CardFooter,
+  CardHeader,
+} from "@/components/ui/card";
 import { Switch } from "@/components/ui/switch";
 import { Check } from "lucide-react";
 
@@ -19,10 +24,10 @@ export default function Pricing() {
         "Basic analytics",
         "24/7 support",
         "1 team member",
-        "10GB storage"
+        "10GB storage",
       ],
       cta: "Get Started",
-      highlighted: false
+      highlighted: false,
     },
     {
       name: "Professional",
@@ -36,10 +41,10 @@ export default function Pricing() {
         "Up to 10 team members",
         "100GB storage",
         "Custom integrations",
-        "Advanced security"
+        "Advanced security",
       ],
       cta: "Get Started",
-      highlighted: true
+      highlighted: true,
     },
     {
       name: "Enterprise",
@@ -54,22 +59,24 @@ export default function Pricing() {
         "99.99% uptime SLA",
         "Enterprise API access",
         "Advanced security",
-        "Compliance assistance"
+        "Compliance assistance",
       ],
       cta: "Contact Sales",
-      highlighted: false
-    }
+      highlighted: false,
+    },
   ];
 
   return (
     <section id="pricing" className="py-24 relative overflow-hidden">
       {/* Background decorations */}
-      <div className="absolute -right-40 top-20 w-80 h-80 bg-purple-600/10 rounded-full blur-3xl"></div>
-      <div className="absolute -left-40 bottom-20 w-80 h-80 bg-pink-600/10 rounded-full blur-3xl"></div>
+      <div className="overflow-hidden">
+        <div className="absolute -right-40 top-20 w-80 h-80 bg-purple-600/10 rounded-full blur-3xl"></div>
+        <div className="absolute -left-40 bottom-20 w-80 h-80 bg-pink-600/10 rounded-full blur-3xl"></div>
+      </div>
 
-      <div className="container px-4 md:px-6">
+      <div className="container mx-auto px-4 md:px-6">
         <div className="text-center space-y-4 mb-16">
-          <motion.h2 
+          <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
@@ -78,7 +85,7 @@ export default function Pricing() {
           >
             Simple, Transparent Pricing
           </motion.h2>
-          <motion.p 
+          <motion.p
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
@@ -88,21 +95,26 @@ export default function Pricing() {
             Choose the perfect plan for your needs. No hidden fees.
           </motion.p>
 
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
             viewport={{ once: true }}
             className="flex items-center justify-center mt-8 gap-3"
           >
-            <span className={annual ? "text-muted-foreground" : "font-medium"}>Monthly</span>
+            <span className={annual ? "text-muted-foreground" : "font-medium"}>
+              Monthly
+            </span>
             <Switch
               checked={annual}
               onCheckedChange={setAnnual}
               className="data-[state=checked]:bg-gradient-to-r from-purple-500 to-pink-600"
             />
             <span className={annual ? "font-medium" : "text-muted-foreground"}>
-              Annual <span className="text-sm text-green-500 dark:text-green-400">(Save 20%)</span>
+              Annual{" "}
+              <span className="text-sm text-green-500 dark:text-green-400">
+                (Save 20%)
+              </span>
             </span>
           </motion.div>
         </div>
@@ -133,7 +145,9 @@ export default function Pricing() {
                 )}
                 <CardHeader className="pb-0">
                   <h3 className="text-xl font-bold">{plan.name}</h3>
-                  <p className="text-muted-foreground mt-1">{plan.description}</p>
+                  <p className="text-muted-foreground mt-1">
+                    {plan.description}
+                  </p>
                 </CardHeader>
                 <CardContent className="flex-grow py-8">
                   <div className="mb-6">
@@ -154,7 +168,7 @@ export default function Pricing() {
                   </ul>
                 </CardContent>
                 <CardFooter>
-                  <Button 
+                  <Button
                     className={`w-full h-12 ${
                       plan.highlighted
                         ? "bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white border-0"

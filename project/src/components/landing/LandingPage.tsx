@@ -8,14 +8,16 @@ import Footer from "./Footer";
 
 export default function LandingPage() {
   return (
-    <div className="min-h-screen bg-background flex flex-col">
+    <div className="min-h-screen bg-background flex flex-col w-full">
       <Navbar />
-      <main className="flex-grow">
-        <Hero />
-        <Features />
-        <Testimonials />
-        <Pricing />
-        <CTA />
+      <main className="w-full">
+        <div className="">
+          <Hero />
+          <Features />
+          <Testimonials />
+          <Pricing />
+          <CTA />
+        </div>
       </main>
       <Footer />
     </div>

@@ -52,54 +52,60 @@ export default function Footer() {
 
   return (
     <footer className="bg-background border-t border-border/40">
-      <div className="container px-4 md:px-6 py-12 md:py-16">
-        <div className="grid grid-cols-2 md:grid-cols-5 gap-8">
-          <div className="col-span-2">
-            <div className="flex items-center space-x-2 mb-4">
-              <span className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-600">
-                Horizon
-              </span>
+      <div className="w-full">
+        <div className="px-4 md:px-6 py-12 md:py-16 2xl:max-w-[1440px] 2xl:mx-auto">
+          <div className="flex flex-col text-left gap-8">
+            <div className="col-span-2">
+              <div className="flex items-start  space-x-2 mb-4">
+                <span className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-600">
+                  Horizon
+                </span>
+              </div>
+              <p className="text-muted-foreground mb-4 max-w-xs text-left">
+                Transforming the digital landscape with innovative solutions for businesses of all sizes.
+              </p>
+              <div className="flex space-x-4 ">
+                {socialLinks.map((link, i) => (
+                  <a
+                    key={i}
+                    href={link.href}
+                    className="text-muted-foreground hover:text-foreground transition-colors"
+                    aria-label={link.label}
+                  >
+                    {link.icon}
+                  </a>
+                ))}
+              </div>
             </div>
-            <p className="text-muted-foreground mb-4 max-w-xs">
-              Transforming the digital landscape with innovative solutions for businesses of all sizes.
-            </p>
-            <div className="flex space-x-4">
-              {socialLinks.map((link, i) => (
-                <a
-                  key={i}
-                  href={link.href}
-                  className="text-muted-foreground hover:text-foreground transition-colors"
-                  aria-label={link.label}
-                >
-                  {link.icon}
-                </a>
-              ))}
-            </div>
+            
+            <div className=" flex flex-col md:flex-row gap-5 justify-between items-start">
+
+            {footerLinks.map((group, i) => (
+              <div key={i} className=" text-left">
+                <h4 className="font-medium text-foreground mb-2 md:mb-4">{group.title}</h4>
+                <ul className="space-y-2 md:space-y-3">
+                  {group.links.map((link, j) => (
+                    <li key={j}>
+                      <a
+                        href={link.href}
+                        className="text-muted-foreground hover:text-foreground transition-colors"
+                      >
+                        {link.name}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+                        </div>
+
           </div>
           
-          {footerLinks.map((group, i) => (
-            <div key={i}>
-              <h4 className="font-medium text-foreground mb-4">{group.title}</h4>
-              <ul className="space-y-3">
-                {group.links.map((link, j) => (
-                  <li key={j}>
-                    <a
-                      href={link.href}
-                      className="text-muted-foreground hover:text-foreground transition-colors"
-                    >
-                      {link.name}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
-        </div>
-        
-        <div className="mt-12 pt-8 border-t border-border/40 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-muted-foreground text-sm">
-            © {year} Horizon. All rights reserved.
-          </p>
+          <div className="mt-12 pt-8 border-t border-border/40 flex flex-col md:flex-row justify-between items-center">
+            <p className="text-muted-foreground text-sm">
+              © {year} Horizon. All rights reserved.
+            </p>
+          </div>
         </div>
       </div>
     </footer>

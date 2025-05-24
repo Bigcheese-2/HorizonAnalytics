@@ -15,7 +15,7 @@ export default function CTA() {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
         viewport={{ once: true }}
-        className="relative z-10 container px-4 md:px-6"
+        className="relative z-10 container mx-auto px-4 md:px-6"
       >
         <div className="max-w-3xl mx-auto text-center space-y-8">
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
